@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="ex13最終課題.css">
+    <title></title>
+  </head>
+  <body>
+    <p class="img_center">
+      <img src="akutoku_shouhou_furikome_sagi.png" width="500" height="600" alt="ATMで振り込もうとするおばあさん">
+    </p>
+
+    <p class="passage"><big><span><strong>相手：</strong>ATMで暗証番号を入力して</span></big></p>
+    <p class="passage"><big><span><strong>おば：</strong>分かった</span></big></p><br><br>
+
+    <p class="passage"><big><span><strong>暗証番号はおばあさんの生年月日のうち<br>1.生まれた西暦<br>2.生まれた月<br>3.生まれた日付
+      <br>のどれかです。<br>簡単すぎるので答えるごとに答えが変わるようにしています。
+      <br>頑張ってください！</strong></span></big></p>
+
+ <a href="ex4page.html"><input type="button" style="width:100%;" value="戻る" onclick="alert('時を戻す');"></a>
+<input type="text" style="width:100%;" value="暗証番号を入力" id="num1">
+<input type="button" style="width:100%;" value="決定" onclick="num();">
+
+   <style>
+   body {
+
+      background-image: url(convenience_store_24.png);
+
+   }
+     </style>
+
+  　<script>
+
+  function num(){
+
+         let num1 = document.getElementById("num1").value;//変数num1にtextboxに入力された値を代入
+
+         let rannum = ['1952', '6', '28'];//変数rannumに[]配列を代入
+
+         let random = Math.floor( Math.random() * (2 + 1 - 0) ) + 0;//変数randomに0~2の乱数を代入
+
+         let a = rannum[random];//rannumからランダムに選ばれた手をaとする
+
+
+if(num1==a){
+  //もしnum1の値(textboxに入力された値)がaと等しかったら
+  location.href = "ex6page.html";
+  //location.hrefでex6page.htmlにページ移動する
+}else{
+  //もしnum1の値(textboxに入力された値)がaと等しくなかったら
+  alert("違うよ");
+  //違うよとアラート
+   }
+
+}
+
+
+    </script>
+
+  </body>
+</html>

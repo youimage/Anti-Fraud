@@ -1,0 +1,56 @@
+p.img_center{
+
+  text-align:center;
+
+}
+
+body {
+
+	background-image: url(bg_house_living.jpg);
+}
+
+
+
+span {
+
+	color:black;
+	background-color:#ffffff;
+
+}
+
+p.passage{
+
+  text-align: center;
+
+
+}
+
+.animation{
+
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  width: 128px;
+
+}
+
+p.img_center1{
+
+    text-align:center;
+  animation-name: anim_s;
+  transform: rotate(30deg);
+  animation-duration: 6s;
+
+}
+
+@keyframes anim_s {
+
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+
+}

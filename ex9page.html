@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="ex13最終課題.css">
+    <title></title>
+  </head>
+  <body>
+<p class="img_center">
+  <img src="a04b6812f6a93165c4715fba8599c8b1_t.jpg" width="500" height="600" alt="詐欺師">
+</p>
+
+<h2>問題</h2>
+<!--血液型のラジオボタンを作る nameは同じblood_typeにしとく-->
+<input type="checkbox" name="ps_type" value=1><p class="passage"><big><span><strong>1.事前にご家族と合言葉を決めて、電話の際に合言葉を聞くようにしましょう。</strong></span></big></p><br>
+<input type="checkbox" name="ps_type" value=2><p class="passage"><big><span><strong>2.パスワードやお金関係のことは、1度警察に相談してから考えましょう。</strong></span></big></p><br>
+<input type="checkbox" name="ps_type" value=3><p class="passage"><big><span><strong>3.詐欺師は音声の録音を嫌います。そのため、家の電話は留守電にしておきましょう。</strong></span></big></p><br>
+<input type="checkbox" name="ps_type" value=4><p class="passage"><big><span><strong>4.二次被害を防ぐため、相手の言うとおりに行動しましょう。</strong></span></big></p><br>
+<input type="checkbox" name="ps_type" value=5><p class="passage"><big><span><strong>5.相手が誰であれ、困ってる様子なら助けてあげましょう。</strong></span></big></p><br>
+<input type="checkbox" name="ps_type" value=7><p class="passage"><big><span><strong>6.そもそも自分にオレオレ詐欺が来るわけないから考える必要はありません。</strong></span></big></p><br>
+<input type="button" style="width:100%;" value="決定" onclick="dom();">
+
+<style>
+
+body {
+
+   background-image: url(OIP.jpg);
+
+}
+
+</style>
+
+<script>
+
+function dom(){
+
+  let l = document.getElementsByName("ps_type");//nameの値が"ps_type"のチェックボックスを配列として取ってきて変数に入れる
+  let sum = 0;//合計の数字(この後、valueでおいたそれぞれの値を数字として扱う)を記憶する変数
+
+
+  for(let q = 0;q<6;q=q+1){
+    　　//配列は選択肢の種類、0から5のみ(6項目)
+  　　  //選択された項目が0 から 5(6種類以内)ならば以下のことを繰り返し
+      if(l[q].checked == true){
+      　//もし配列の項目に当てはまっていたら以下のことを実行
+    sum = sum + Number(l[q].value);
+  　　  //Numberを使って文字列を数値化する
+  　　  //sum(合計の数字)に配列の中で選択された各選択肢に割り当てられた数字を足す
+
+  }
+}
+if(sum==6){
+  //もし合計の数字が6であるならば(3つを選ぶ場合、1通りしかない)
+    alert("正解");
+    //正解とアラート
+      location.href = "ex8page.html";
+    //location.hrefでex8page.htmlページに移動
+  }else {
+    //もし合計(sum)が6でなければ(上でも述べた1通りのパターンである)
+    alert("不正解");
+    //不正解とアラート
+ }
+}
+
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="ex13最終課題.css">
+    <title>wawawa</title>
+  </head>
+  <body>
+    <p class="img_center">
+      <img src="phone_kurodenwa_call.png" width="500" height="600" alt="黒電話">
+    </p>
+
+    <p class="passage"><strong><big><span>黒電話が家中に鳴り響いている</span></big></strong></p>
+
+    <a href="ex3page.html"><input type="button" style="width:100%;" value="電話に出る" onclick="alert('おばあさんは受話器を取った！');"></a>
+     <a href="unex3page.html"><input type="button" style="width:100%;" value="電話に出ない" onclick="alert('おばあさんは電話に出なかったことに罪悪感を覚えた。')"></a>
+      <a href="ex13最終課題.html"><input type="button" style="width:100%;" value="戻る" onclick="alert('時を戻す');"></a>
+
+     <script>
+//電話に出なければ8秒で切れる
+     setTimeout(function(){
+  window.location.href = 'unex3page.html';
+}, 8*1000);//8秒間の間にボタンを押さなければ、自動的にunex3page.htmlページに移る。
+
+     </script>
+  </body>
+</html>
